@@ -9,3 +9,5 @@ springfox:
     enabled: false
 file:
   templates-path: "" # 模版文件路径
+authorization:
+  jwt-secret: "oFUNAb8k7esIDTO1FWH8b5EONZLSB3jX9JQTe2S61YCj25n3kyRaZJAcdU1pjmR7"

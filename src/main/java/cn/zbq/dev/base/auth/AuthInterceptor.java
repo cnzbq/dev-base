@@ -1,7 +1,10 @@
 package cn.zbq.dev.base.auth;
 
 import cn.zbq.dev.base.annotations.AuthIgnore;
+import cn.zbq.dev.base.utils.JwtTokenUtils;
+import com.baomidou.mybatisplus.extension.exceptions.ApiException;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -12,6 +15,8 @@ import java.util.Objects;
 
 /**
  * 权限拦截
+ * <p>
+ * 请求时在header中增加Authorization字段
  *
  * @author zbq
  * @date 2020/8/14
@@ -35,10 +40,11 @@ public class AuthInterceptor implements HandlerInterceptor {
             return true;
         }
 
-        // todo 验证token是否有效的相关逻辑
-        System.out.println();
-
-        //throw new ApiException("测试一下");
+        String authorization = request.getHeader("Authorization");
+        if (StringUtils.isEmpty(authorization)) {
+            throw new ApiException("授权已过期，请重新登录");
+        }
+        JwtTokenUtils.verifierToken(authorization);
         return true;
     }
 }
