@@ -4,6 +4,12 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: "" # 密码
+    database: 0
+    timeout: 200
 springfox:
   documentation:
     enabled: false
