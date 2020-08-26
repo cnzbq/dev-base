@@ -27,8 +27,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        // 添加权限验证拦截器
-        registry.addInterceptor(authInterceptor).addPathPatterns("/api/**");
+        // 添加权限验证拦截器，注意这里的Patterns不包括server.servlet.context-path配置的路径
+        registry.addInterceptor(authInterceptor).addPathPatterns("/**");
     }
 
     /**

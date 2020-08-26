@@ -24,6 +24,7 @@ import java.util.Objects;
 @Slf4j
 @Component
 public class AuthInterceptor implements HandlerInterceptor {
+    @SuppressWarnings("all")
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
         AuthIgnore authIgnore;
