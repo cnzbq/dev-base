@@ -15,10 +15,14 @@
 | Swagger2     | 2.1.2  |
 | MySQL        | 8.x    |
 | auth0/jwt    | 3.10.3 |
+| easyExcel    | 2.2.6  |
 
+- 2020-08-30
+easyExcel 集成，通过ExcelUtils继承EasyExcelFactory针对web场景做了进一步的功能封装
+官方文档 https://www.yuque.com/easyexcel/doc/easyexcel
 
 - 2020-08-25
-集成Redisson，官方文档 `https://github.com/redisson/redisson/tree/master/redisson-spring-boot-starter#spring-boot-starter`
+集成Redisson，官方文档 https://github.com/redisson/redisson/tree/master/redisson-spring-boot-starter#spring-boot-starter
 可以RedissonClient/RedisTemplate/ReactiveRedisTemplate来使用
 
 - 2020-08-16
