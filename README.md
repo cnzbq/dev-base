@@ -17,6 +17,9 @@
 | auth0/jwt    | 3.10.3 |
 | easyExcel    | 2.2.6  |
 
+- 2020-09-17
+修改日志框架为log4j2
+
 - 2020-08-30
 easyExcel 集成，通过ExcelUtils继承EasyExcelFactory针对web场景做了进一步的功能封装
 官方文档 https://www.yuque.com/easyexcel/doc/easyexcel
